@@ -1,4 +1,4 @@
-# trabAlgoritmos2
+# trab2Algoritmos2
 Trabalho realizado na disciplina de algoritmos 2 da professora Andrea pela Unesp Baru
 
 
