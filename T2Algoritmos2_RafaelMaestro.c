@@ -1,5 +1,4 @@
-/* Programa desenvolvido como Trabalho 2 da disciplina de Algoritmos 2 - UNESP Bauru
-Por Jõao Pedro de Freitas Zanqui e Rafael Maestro dos Santos */
+
 
 #include <stdio.h>
 #include <conio.h>
@@ -199,7 +198,7 @@ void alterar(char nomeArq[], FILE *arquivo) {
 		}
 		
 		else {
-			printf ("\n\t Pressione qualquer tecla para voltar para o Menu de Alteração...\n\n");
+			printf ("\n\t Pressione qualquer tecla para voltar para o Menu de Alteraï¿½ï¿½o...\n\n");
 		    getch();
 		}
 		
@@ -233,7 +232,7 @@ void apagaReg(char nomeArq[], FILE *arquivo) {
      			printf ("\n\t ID: %d", x.id);
      			printf ("\n\t Quantidade: %d unidade(s)", x.qtd);
      			printf ("\n\t Peso (g): %.2f", x.peso);
-     			printf ("\n\t Preço R$: %.2f", x.preco);
+     			printf ("\n\t Preï¿½o R$: %.2f", x.preco);
      			achou=1;
      			break;
      		}
@@ -262,12 +261,12 @@ void apagaReg(char nomeArq[], FILE *arquivo) {
 				}
 		      	
 				else {
-		       		printf ("\n\t Produto %s NÃO removido...\n\n",x.nome);
+		       		printf ("\n\t Produto %s Nï¿½O removido...\n\n",x.nome);
 		    	}
 		    }
 				
 			else {
-				printf ("\n\t Nao há produto cadastrado com id %d.\n\n",numero);
+				printf ("\n\t Nao hï¿½ produto cadastrado com id %d.\n\n",numero);
 			}		
     
        	printf("\n\n\t\tDeseja apagar um outro produto?\n\t1 - SIM\n\t2 - NAO\n\t");
@@ -289,7 +288,7 @@ void apagaReg(char nomeArq[], FILE *arquivo) {
 		}
 		
 		else {
-			printf ("\n\t Pressione qualquer tecla para voltar para o Menu de Exclusão...\n\n");
+			printf ("\n\t Pressione qualquer tecla para voltar para o Menu de Exclusï¿½o...\n\n");
 		    getch();
 		}
 		
@@ -373,7 +372,7 @@ void consultar(char nomeArq[], FILE *arquivo) {
 	     			printf ("\n\t ID: %d", x.id);
 	     			printf ("\n\t Quantidade: %d unidade(s)", x.qtd);
 	     			printf ("\n\t Peso (g): %.2f", x.peso);
-	     			printf ("\n\t Preço R$: %.2f", x.preco);
+	     			printf ("\n\t Preï¿½o R$: %.2f", x.preco);
 	     			achou=1;
 	     			break;
 				}
@@ -385,7 +384,7 @@ void consultar(char nomeArq[], FILE *arquivo) {
 	     			printf ("\n\t ID: %d", x.id);
 	     			printf ("\n\t Quantidade: %d unidade(s)", x.qtd);
 	     			printf ("\n\t Peso (g): %.2f", x.peso);
-	     			printf ("\n\t Preço R$: %.2f", x.preco);
+	     			printf ("\n\t Preï¿½o R$: %.2f", x.preco);
 	     			achou=1;
 	     			break;
 				}
@@ -494,7 +493,7 @@ void remover(char nomeArq[], FILE *arquivo) {
 			
 	else {
 		fclose(arquivo);
-		printf ("\n\t O arquivo %s não foi removido...\n\tPressione qualquer tecla para voltar para o Menu Principal...\n", nomeArq);
+		printf ("\n\t O arquivo %s nï¿½o foi removido...\n\tPressione qualquer tecla para voltar para o Menu Principal...\n", nomeArq);
 	    getch();
 	}
 	
@@ -517,7 +516,7 @@ void mostraTempo(){
 void listaArquivosPasta(){
 
     system("cls");
-    printf("Arquivos existentes no diretório atual:\n");
+    printf("Arquivos existentes no diretï¿½rio atual:\n");
     system("tree /f");
     printf("\nPara voltar ao menu pressione qualquer tecla...");
     getch();
@@ -533,7 +532,7 @@ void exibeAjuda() {
    	char c[10000];
 
     if((ajuda = fopen("ajuda.txt", "r"))==NULL){
-    	printf("\n\tO arquivo ajuda não existe...\n\n\tPressione qualquer tecla para voltar ao menu principal...\n");
+    	printf("\n\tO arquivo ajuda nï¿½o existe...\n\n\tPressione qualquer tecla para voltar ao menu principal...\n");
 	}
 
 	while(fgets(c, 10000, ajuda) != NULL){
@@ -554,7 +553,7 @@ void exibeAjuda() {
 void criaPasta(){
 
     system("cls");
-    printf("\n\tCrie uma pasta no diretório atual");
+    printf("\n\tCrie uma pasta no diretï¿½rio atual");
     char str1[20], str2[]={"mkdir "};
     fflush(stdin);
     printf("\n\tDigite o nome da pasta que deseja criar\n\t-->  ");
@@ -571,7 +570,7 @@ void criaPasta(){
 void renomeiaPasta(){
 
     system("cls");
-    printf("\n\tEdite o nome de uma pasta no diretório atual");
+    printf("\n\tEdite o nome de uma pasta no diretï¿½rio atual");
     char str1[20], str2[]={"rename "}, str3[20];
     fflush(stdin);
     printf("\n\tDigite o nome ATUAL da pasta\n\t-->  ");
@@ -598,7 +597,7 @@ void mudarDePasta()
 	
 	system("cls");
 	printf("\n\tMude arquivos de pasta...");
-	printf("\n\n\tDigite o nome da pasta onde se encontra o arquivo \n\t(se ele estiver no diretório atual nao digite nada e apenas pressione enter...)\n\t --> ");
+	printf("\n\n\tDigite o nome da pasta onde se encontra o arquivo \n\t(se ele estiver no diretï¿½rio atual nao digite nada e apenas pressione enter...)\n\t --> ");
 	fflush(stdin);
 	gets(pastaAtual);
 	printf("\tDigite o nome do arquivo\n\t --> ");
@@ -625,7 +624,7 @@ void mudarDePasta()
 	
 	fclose(arquivo);
 	
-	printf("\n\n\tDigite o nome da pasta para onde será transferido o arquivo\n\t(se quiser transferir para o diretório atual nao digite nada e apenas pressione enter...)\n\t --> ");
+	printf("\n\n\tDigite o nome da pasta para onde serï¿½ transferido o arquivo\n\t(se quiser transferir para o diretï¿½rio atual nao digite nada e apenas pressione enter...)\n\t --> ");
 	fflush(stdin);
 	gets(pastaAtual);
 	
@@ -668,7 +667,7 @@ void mudaCor() {
     char cor[5];
     char str[]={"color "};
     fflush(stdin);
-    printf("\n\tCaso não saiba quais numeros representam quais cores, pode consulta-los no arquivo de ajuda!\n");
+    printf("\n\tCaso nï¿½o saiba quais numeros representam quais cores, pode consulta-los no arquivo de ajuda!\n");
     printf("\n\tDigite os dois digitos que representam as cores que deseja para primeiro plano e\n\ttela de fundo do console: \n\n\t --> ");
     gets(cor);
     strcat(str, cor);
